@@ -67,8 +67,7 @@ EXPOSE 6006
 # IPython
 EXPOSE 8888
 
-ADD codes /home/codes
-ADD slides /home/slides
+ADD . /home
 
 WORKDIR "/home"
 
