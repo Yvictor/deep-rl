@@ -2,41 +2,41 @@ FROM ubuntu:16.04
 
 MAINTAINER yvictor
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        build-essential \
-        curl \
-        libfreetype6-dev \
-        libpng12-dev \
-        libzmq3-dev \
-        pkg-config \
-        python \
-        python-dev \
-        rsync \
-        software-properties-common \
-        unzip \
-        zip \
-        git \
-        make \
-        cmake \
-        zlib1g-dev \
-        libjpeg-dev \
-        xvfb \
-        libav-tools \
-        xorg-dev \
-        python-opengl \
-        libboost-all-dev \
-        libsdl2-dev \
-        swig \
-        wget \
-        htop \
-        && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+#RUN apt-get update && apt-get install -y --no-install-recommends \
+#        build-essential \
+#        curl \
+#        libfreetype6-dev \
+#        libpng12-dev \
+#        libzmq3-dev \
+#        pkg-config \
+#        python \
+#        python-dev \
+#        rsync \
+#       software-properties-common \
+#       unzip \
+#       zip \
+#      git \
+#      make \
+#      cmake \
+#        zlib1g-dev \
+#        libjpeg-dev \
+#        xvfb \
+#        libav-tools \
+#        xorg-dev \
+#        python-opengl \
+#        libboost-all-dev \
+#        libsdl2-dev \
+#        swig \
+#        wget \
+#        htop \
+#        && \
+#    apt-get clean && \
+#    rm -rf /var/lib/apt/lists/*
 
       
-ENV PYENV_ROOT /root/.pyenv
-ENV PATH /root/.pyenv/shims:/root/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-RUN curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+#ENV PYENV_ROOT /root/.pyenv
+#ENV PATH /root/.pyenv/shims:/root/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+#RUN curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 #RUN pyenv install anaconda3-4.3.0
 #RUN pyenv global anaconda3-4.3.0
 
@@ -63,12 +63,12 @@ RUN curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/py
 # ENV LD_LIBRARY_PATH /usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
 
 # TensorBoard
-EXPOSE 6006
+#EXPOSE 6006
 # IPython
-EXPOSE 8888
+#EXPOSE 8888
 
-ADD . /home
+#ADD . /home
 
-WORKDIR "/home"
+#WORKDIR "/home"
 
 #CMD jupyter notebook --ip 0.0.0.0 --allow-root
