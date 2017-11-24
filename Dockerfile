@@ -37,14 +37,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ENV PYENV_ROOT /root/.pyenv
 ENV PATH /root/.pyenv/shims:/root/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 RUN curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
-RUN pyenv install anaconda3-4.3.0
-RUN pyenv global anaconda3-4.3.0
+#RUN pyenv install anaconda3-4.3.0
+#RUN pyenv global anaconda3-4.3.0
 
 # fixed liggcc
-RUN conda install libgcc -y
+#RUN conda install libgcc -y
 
 # Install package
-RUN pip  install --no-cache-dir matplotlib==2.0.2 numpy==1.13.1 Pillow==3.4.2 seaborn==0.7.1 tensorflow==1.3.0 tensorflow-tensorboard==0.1.5 keras==2.0.8 scipy==0.19.0 gym[atari]
+#RUN pip  install --no-cache-dir matplotlib==2.0.2 numpy==1.13.1 Pillow==3.4.2 seaborn==0.7.1 tensorflow==1.3.0 tensorflow-tensorboard==0.1.5 keras==2.0.8 scipy==0.19.0 gym[atari]
 
 
 
